@@ -41,8 +41,9 @@ public class ArrayListTest {
         ArrayList<Integer> integerArrayList = getRandomIntegerArrayList(N);
         for (int i = 0; i < 100; i++) {
             int randomIndex = TestTool.getRandomInt(N - i);
-            assertTrue(integerArrayList.remove(randomIndex));
+            assertNotNull(integerArrayList.remove(randomIndex));
         }
+        assertEquals(9900,integerArrayList.size());
     }
 
     @Test

@@ -47,12 +47,13 @@ public class ArrayList<E> {
         return true;
     }
 
-    public boolean remove(int index) {
+    public E remove(int index) {
         if (index >= size || index < 0)
-            return false;
+            return null;
+        E ret = array[index];
         System.arraycopy(array, index + 1, array, index, size - index - 1);
         --size;
-        return true;
+        return ret;
     }
 
     private void extendArray() {
