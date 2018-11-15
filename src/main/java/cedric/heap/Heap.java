@@ -7,7 +7,7 @@ import java.util.Comparator;
 public class Heap<E> {
     Comparator<E> comp;
     ArrayList<E> heapArray;
-    int K;
+    final int K;
 
     public Heap(int K, Comparator<E> comp) {
         this.K = K;
