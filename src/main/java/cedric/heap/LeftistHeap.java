@@ -2,7 +2,6 @@ package cedric.heap;
 
 import java.util.Comparator;
 
-//todo: unit test
 public class LeftistHeap<E> {
     // could be static class?
     class Node {
@@ -56,7 +55,7 @@ public class LeftistHeap<E> {
         // could be comp.equals() ?
         if (comp != anotherLeftistTree.comp)
             return false;
-        mergeNode(root, anotherLeftistTree.root);
+        root = mergeNode(root, anotherLeftistTree.root);
         size += anotherLeftistTree.size;
         return true;
     }
