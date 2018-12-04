@@ -3,10 +3,9 @@ package cedric.heap;
 import java.util.Comparator;
 
 public class LeftistHeap<E> {
-    // could be static class?
-    class Node {
-        E data;
-        Node leftChild, rightChild;
+    static class Node<T> {
+        T data;
+        Node<T> leftChild, rightChild;
         int s = 1;
 
         public Node(E data) {
